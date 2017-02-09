@@ -12,7 +12,8 @@ function statGen() {
   var stat = Math.floor( (Math.random() * 20) );
 //If, however, we want a reasonable value, I want to 're-roll' if we get anything below 6
   if (stat <= 6) {
-    statGen();
+    var stat = statGen();
+    return stat;
 //Otherwise, I want to know in the console that it's working, and then I want the value returned
   } else {
     console.log("Your stat roll is " + stat);
